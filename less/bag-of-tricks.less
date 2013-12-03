@@ -1,0 +1,23 @@
+// from: http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
+// parent must have position relative or absolute
+// requires declared height
+.abs-center {
+	margin: auto;
+	position: absolute;
+	top: 0;	left: 0; right : 0;	bottom: 0;
+}
+
+// from: http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
