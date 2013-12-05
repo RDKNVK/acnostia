@@ -21,3 +21,37 @@
 .clearfix {
     zoom:1;
 }
+
+
+// placeholder mixin
+.placeholder-inp (@ffamily: Arial, @fsize: 16px, @fweight: normal, @col: black, @marg: 0) {
+		::-webkit-input-placeholder {
+			font-family: @ffamily;
+			font-size: @fsize;
+			font-weight: @fweight;
+			color: @col;
+			margin: @marg;
+		}		
+		:-moz-placeholder { /* Firefox 18- */
+			font-family: @ffamily;
+			font-size: @fsize;
+			font-weight: @fweight;
+			color: @col;
+			margin: @marg;
+   			
+		}		
+		::-moz-placeholder {  /* Firefox 19+ */
+   		font-family: @ffamily;
+			font-size: @fsize;
+			font-weight: @fweight;
+			color: @col;
+			margin: @marg;
+		}
+		:-ms-input-placeholder {  
+   			font-family: @ffamily;
+			font-size: @fsize;
+			font-weight: @fweight;
+			color: @col;
+			margin: @marg;
+		}
+}
