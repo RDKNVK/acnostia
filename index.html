@@ -10,28 +10,40 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Damion' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- 
 	-->
     <!--[if lt IE 9]>
      <script src="js/lib/html5shiv.js"></script>
 	<![endif]-->
-	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
-      function initialize() {
+    function initialize() {
         var map_canvas = document.getElementById('google_map');
         var map_options = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+            center: new google.maps.LatLng(44.5403, -78.5463),
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(map_canvas, map_options)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 </head>
 
 <body>
+	<div id="to-hide" style="background-color: rgba(220,200,20,0.5); 
+	color: black;
+	text-align: center;
+	padding: 15px; 
+	letter-spacing: 3px;">
+	Made as a practice in html coding from 
+	<a href="http://outlinez.net/acrostia-free-one-page-psd-template/" style="text-decoration: underline">psd template</a>. Look at sources in 
+	<a href="https://github.com/RDKNVK/acnostia/" style="text-decoration: underline">github repo</a>
+	
+	<a href="#" onclick="document.getElementsByTagName('body')[0].removeChild(document.getElementById('to-hide'));" style="color: #A55;float:right;">close</a>
+	
+	</div>
     <section id="home">
         <div class="wrapper">
             <header>
@@ -51,26 +63,26 @@
                     </ul>
                 </nav>
             </header>
-            
+
             <a href="#" class="arrow-left"></a>
             <a href="#" class="arrow-right"></a>
-            
+
             <div class="content">
 
-            	<ul class="slider">
-            		<li class="visible" data-bgurl="./img/slider/slider1.jpg">
-            			<div class="sl1">GOOD IDEAS come</div>
-            			<div class="sl2">FIRST!</div>
-            		</li>
-            		<li data-bgurl="./img/slider/unsplash_528cba6de78e5_1.JPG">
-            			<div class="sl1">GREAT IDEA comes</div>
-            			<div class="sl2">AFTER!</div>
-            		</li>
-            		<li data-bgurl="./img/slider/unsplash_527e864de3770_2.jpg">
-            			<div class="sl1">LOREM IPSUM comes</div>
-            			<div class="sl2">FIRST!</div>
-            		</li>
-            	</ul>
+                <ul class="slider">
+                    <li class="visible" data-bgurl="./img/slider/slider1.jpg">
+                        <div class="sl1">GOOD IDEAS come</div>
+                        <div class="sl2">FIRST!</div>
+                    </li>
+                    <li data-bgurl="./img/slider/unsplash_528cba6de78e5_1.JPG">
+                        <div class="sl1" style="width: 47%;">GREAT IDEA comes</div>
+                        <div class="sl2" style="width: 53%;">THEN!</div>
+                    </li>
+                    <li data-bgurl="./img/slider/unsplash_527e864de3770_2.jpg">
+                        <div class="sl1">LOREM IPSUM comes</div>
+                        <div class="sl2">FIRST!</div>
+                    </li>
+                </ul>
             </div>
             <div class="dots"></div>
         </div>
@@ -150,127 +162,135 @@
                 <div class="arrowheader">Meet the team</div>
 
                 <div class="col-4 member-1">
-                	<div class="member-photo"><img src="img/member-violet.png"></div>
+                    <div class="member-photo">
+                        <img src="img/member-violet.png">
+                    </div>
 
                     <div class="name">Anton Petrov</div>
                     <div class="job">General manager</div>
                     <div class="social">
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="facebook-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="facebook-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="twitter-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="twitter-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="google-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="google-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                     </div>
                 </div>
                 <div class="col-4 member-2">
-                	<div class="member-photo"><img src="img/member-violet.png"></div>
+                    <div class="member-photo">
+                        <img src="img/member-violet.png">
+                    </div>
                     <div class="name">Kirl Donchev</div>
                     <div class="job">Design Master</div>
                     <div class="social">
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="facebook-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="facebook-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="twitter-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="twitter-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="google-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="google-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                     </div>
                 </div>
                 <div class="col-4 member-3">
-                	<div class="member-photo"><img src="img/member-violet.png"></div>
+                    <div class="member-photo">
+                        <img src="img/member-violet.png">
+                    </div>
                     <div class="name">Ilian Bonev</div>
                     <div class="job">Developer Ninja</div>
                     <div class="social">
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="facebook-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="facebook-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="twitter-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="twitter-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="google-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="google-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                     </div>
                 </div>
                 <div class="col-4 member-4">
-                	<div class="member-photo"><img src="img/member-violet.png"></div>
+                    <div class="member-photo">
+                        <img src="img/member-violet.png">
+                    </div>
                     <div class="name">Doni Stamov</div>
                     <div class="job">SEO guru</div>
                     <div class="social">
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="facebook-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="facebook-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="twitter-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="twitter-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="google-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="google-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                         <a href="#">
-                        	<span class="fa-stack fa-lg">
-                        		<i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
-                        		<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        	</span>
+                            <span class="fa-stack fa-lg">
+                                <i class="linkedin-circle fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -304,45 +324,101 @@
                     <header>
                         <h2>Portfolio</h2>
                         <ul>
-                            <li>All</li>
-                            <li class="active">Photography</li>
-                            <li>Logo design</li>
-                            <li>Web design</li>
-                            </ul>
+                            <li><a href="#" class="btn-photography">All</a></li>
+                            <li><a href="#" class="btn-photography active">Photography</a></li>
+                            <li><a href="#" class="btn-logo-design">Logo design</a></li>
+                            <li><a href="#" class="btn-web-design">Web design</a></li>
+                        </ul>
                     </header>
 
                     <div class="portfolio-content">
-                        <div class="piece">
-                        	<img src="img/portfolio/1.jpg">
-                            <div class="label">Aenean a elit</div>
+                    	<div class="all" style="display: none;">
+                            <div class="piece">
+                                <img src="img/portfolio/1.jpg">
+                                <div class="label">Aenean a elit</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/2.jpg">
+                                <div class="label">aliquam</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/3.jpg">
+                                <div class="label">suspendisse libero</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/4.jpg">
+                                <div class="label">maecenas fringilla</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/5.jpg">
+                                <div class="label">donec vehicula</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/6.jpg">
+                                <div class="label">ut et sapien</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/7.jpg">
+                                <div class="label">quis malesuada</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/8.jpg">
+                                <div class="label">vestibulum ante</div>
+                            </div>
                         </div>
-                        <div class="piece">
-                        	<img src="img/portfolio/2.jpg">
-                            <div class="label">aliquam</div>
+                        <div class="photography">
+                            <div class="piece">
+                                <img src="img/portfolio/1.jpg">
+                                <div class="label">Aenean a elit</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/2.jpg">
+                                <div class="label">aliquam</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/3.jpg">
+                                <div class="label">suspendisse libero</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/4.jpg">
+                                <div class="label">maecenas fringilla</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/5.jpg">
+                                <div class="label">donec vehicula</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/6.jpg">
+                                <div class="label">ut et sapien</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/7.jpg">
+                                <div class="label">quis malesuada</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/8.jpg">
+                                <div class="label">vestibulum ante</div>
+                            </div>
                         </div>
-                        <div class="piece">
-                        	<img src="img/portfolio/3.jpg">
-                            <div class="label">suspendisse libero</div>
+                        <div class="logo-design" style="display: none;">
+                            <div class="piece">
+                                <img src="img/portfolio/logo-forbes.jpg">
+                                <div class="label">forbes</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/logo-ge.jpg">
+                                <div class="label">GE</div>
+                            </div>
                         </div>
-                        <div class="piece">
-                        	<img src="img/portfolio/4.jpg">
-                            <div class="label">maecenas fringilla</div>
-                        </div>
-                        <div class="piece">
-                        	<img src="img/portfolio/5.jpg">
-                            <div class="label">donec vehicula</div>
-                        </div>
-                        <div class="piece">
-                        	<img src="img/portfolio/6.jpg">
-                            <div class="label">ut et sapien</div>
-                        </div>
-                        <div class="piece">
-                        	<img src="img/portfolio/7.jpg">
-                            <div class="label">quis malesuada</div>
-                        </div>
-                        <div class="piece">
-                        	<img src="img/portfolio/8.jpg">
-                            <div class="label">vestibulum ante</div>
+                        <div class="web-design" style="display: none;">
+                            <div class="piece">
+                                <img src="img/portfolio/this-web.jpg">
+                                <div class="label">acnostia</div>
+                            </div>
+                            <div class="piece">
+                                <img src="img/portfolio/celeste.jpg">
+                                <div class="label">celeste</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -418,82 +494,32 @@
 
     <footer>
         <a href="http://www.facebook.com">
-        	<span class="fa-stack fa-lg">
-        		<i class="fa fa-circle fa-stack-2x"></i>
-        		<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-        	</i>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </i>
         </a>
         <a href="http://www.twitter.com">
-        	<span class="fa-stack fa-lg">
-        		<i class="fa fa-circle fa-stack-2x"></i>
-        		<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-        	</span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
         </a>
         <a href="http://www.plus.google.com">
-        	<span class="fa-stack fa-lg">
-        		<i class="fa fa-circle fa-stack-2x"></i>
-        		<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-        	</span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+            </span>
         </a>
         <a href="http://www.linkedin.com">
-        	<span class="fa-stack fa-lg">
-        		<i class="fa fa-circle fa-stack-2x"></i>
-        		<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-        	</span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
         </a>
     </footer>
 
-    <script>
-
-    (function($) {
-    	var list_len = $('ul.slider li').length,
-    		cur = 0;
-
-
-    	for (var i = 0, ii = list_len; i < ii; i++ ) {
-    		$('#home .dots').append('<div class="dot" />');
-    	}
-    	$($('#home .dots .dot')[0]).addClass('current-dot');
-
-    	$('.arrow-right').click(function() {
-    		cur = cur < list_len - 1 ? ++cur : 0;
-	   		change(cur);
-    	});
-
-    	$('.arrow-left').click(function() {
-    		cur = cur > 0 ? --cur : list_len - 1;
-    		change(cur);
-    	});
-
-    	function change (cur) {
-    		var cur_el = $($('ul.slider li')[cur]),
-    			old_el = $($('ul.slider li')[cur-1]),
-    			new_bg = cur_el.data('bgurl'),
-    			new_cont = cur_el.html(),
-    			changedEl = $('#home');
-
-    		$($('ul.slider li')).each(function() {
-    			$(this).removeClass('visible');
-    		});
-    		$($('#home .dots .dot')).each(function() {
-    			$(this).removeClass('current-dot');
-    		});
-    		cur_el.addClass('visible');
-    		$($('#home .dots .dot')[cur]).addClass('current-dot');
-    		changedEl.css({'background-image': 'url('+new_bg+')'});
-    		//changedEl.html(cur_el.html());
-
-    		/*
-    		$('#home').animate({opacity: 0}, 500, function(){
-    				$(this)
-    					.css({'background-image': 'url('+new_bg+')'})
-    					.animate({opacity: 1});
-    			});
-    		*/
-    	}
-    })(jQuery);
-
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
