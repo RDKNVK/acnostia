@@ -51,3 +51,16 @@
 			color: @col;
 		}
 }
+
+// background resizeable 
+.bg-mixin (@url, @color: transparent) {
+	background: @color url(@url) no-repeat center center; //fixed
+ 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	// experimental IE8- solution 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@url', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@url', sizingMethod='scale')";
+}

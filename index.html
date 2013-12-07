@@ -10,12 +10,25 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Damion' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 
 	-->
     <!--[if lt IE 9]>
      <script src="js/lib/html5shiv.js"></script>
 	<![endif]-->
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('google_map');
+        var map_options = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </head>
 
 <body>
@@ -38,13 +51,28 @@
                     </ul>
                 </nav>
             </header>
+            
+            <a href="#" class="arrow-left"></a>
+            <a href="#" class="arrow-right"></a>
+            
             <div class="content">
-            	<ul>
-            		<li></li>
-            		<li></li>
-            		<li></li>
+
+            	<ul class="slider">
+            		<li class="visible" data-bgurl="/img/slider/slider1.jpg">
+            			<div class="sl1">GOOD IDEAS come</div>
+            			<div class="sl2">FIRST!</div>
+            		</li>
+            		<li data-bgurl="/img/slider/unsplash_528cba6de78e5_1.JPG">
+            			<div class="sl1">GREAT IDEA comes</div>
+            			<div class="sl2">AFTER!</div>
+            		</li>
+            		<li data-bgurl="/img/slider/unsplash_527e864de3770_2.jpg">
+            			<div class="sl1">LOREM IPSUM comes</div>
+            			<div class="sl2">FIRST!</div>
+            		</li>
             	</ul>
             </div>
+            <div class="dots"></div>
         </div>
     </section>
     <section id="services">
@@ -280,7 +308,7 @@
                             <li class="active">Photography</li>
                             <li>Logo design</li>
                             <li>Web design</li>
-                        </ul>
+                            </ul>
                     </header>
 
                     <div class="portfolio-content">
@@ -414,6 +442,58 @@
         	</span>
         </a>
     </footer>
+
+    <script>
+
+    (function($) {
+    	var list_len = $('ul.slider li').length,
+    		cur = 0;
+
+
+    	for (var i = 0, ii = list_len; i < ii; i++ ) {
+    		$('#home .dots').append('<div class="dot" />');
+    	}
+    	$($('#home .dots .dot')[0]).addClass('current-dot');
+
+    	$('.arrow-right').click(function() {
+    		cur = cur < list_len - 1 ? ++cur : 0;
+	   		change(cur);
+    	});
+
+    	$('.arrow-left').click(function() {
+    		cur = cur > 0 ? --cur : list_len - 1;
+    		change(cur);
+    	});
+
+    	function change (cur) {
+    		var cur_el = $($('ul.slider li')[cur]),
+    			old_el = $($('ul.slider li')[cur-1]),
+    			new_bg = cur_el.data('bgurl'),
+    			new_cont = cur_el.html(),
+    			changedEl = $('#home');
+
+    		$($('ul.slider li')).each(function() {
+    			$(this).removeClass('visible');
+    		});
+    		$($('#home .dots .dot')).each(function() {
+    			$(this).removeClass('current-dot');
+    		});
+    		cur_el.addClass('visible');
+    		$($('#home .dots .dot')[cur]).addClass('current-dot');
+    		changedEl.css({'background-image': 'url('+new_bg+')'});
+    		//changedEl.html(cur_el.html());
+
+    		/*
+    		$('#home').animate({opacity: 0}, 500, function(){
+    				$(this)
+    					.css({'background-image': 'url('+new_bg+')'})
+    					.animate({opacity: 1});
+    			});
+    		*/
+    	}
+    })(jQuery);
+
+    </script>
 </body>
 
 </html>
